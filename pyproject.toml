@@ -38,7 +38,6 @@ dev = [
 ]
 
 [project.urls]
-Documentation = "https://github.com/marcosgabriel/pixskin"
 Repository = "https://github.com/marcosgabriel/pixskin"
 
 [tool.setuptools]
