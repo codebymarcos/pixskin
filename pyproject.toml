@@ -1,11 +1,50 @@
 [build-system]
-requires = ["setuptools>=68.0"]
+requires = ["setuptools>=65.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "pixskin"
 version = "0.1.0"
-requires-python = ">=3.9"
+description = "Conversor automático de imagens para pixel art com remoção de fundo IA"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [{name = "marcos", email = "marcosgabrielgomes105@gmail.com"}]
+keywords = ["pixel-art", "sprite", "image-processing", "removal-background", "game-assets"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Artists",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Multimedia :: Graphics",
+    "Topic :: Multimedia :: Graphics :: Graphics Conversion",
+]
 
-[tool.setuptools.packages.find]
-where = ["src"]
+dependencies = [
+    "Pillow>=9.0.0",
+    "numpy>=1.20.0",
+    "rembg>=0.0.50",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+]
+
+[project.urls]
+Documentation = "https://github.com/marcosgabriel/pixskin"
+Repository = "https://github.com/marcosgabriel/pixskin"
+
+[tool.setuptools]
+packages = ["pixskin", "pixskin.modules"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
+pythonpath = ["."]

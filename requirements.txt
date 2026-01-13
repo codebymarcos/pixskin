@@ -1,2 +1,11 @@
-# Dependências
-pytest>=7.4.0
+# Dependências do projeto PixSkin
+# Processamento de imagens
+Pillow>=10.0.0
+numpy>=1.24.0
+scipy>=1.10.0
+
+# Remoção de fundo
+rembg>=0.0.0
+
+# Testes
+pytest-cov>=4.0.0
